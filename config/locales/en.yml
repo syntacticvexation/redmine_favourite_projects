@@ -1,0 +1,10 @@
+# English strings go here for Rails i18n
+en:
+  favourite_projects_box: Favourite Projects
+  favourite_projects:
+        views:
+            index:
+                title: Favourite Projects Manager
+                favourite_projects: Favourite Projects
+                available_projects: Available Projects
+                add_project: Add this project

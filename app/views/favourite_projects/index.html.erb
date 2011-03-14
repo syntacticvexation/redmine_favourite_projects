@@ -1,0 +1,38 @@
+<h2><%=l('favourite_projects.views.index.title')%></h2>
+<div id="available">
+<h3><%=l('favourite_projects.views.index.available_projects')%></h3>
+<table>
+<thead>
+<th>Project Name</th>
+</thead>
+<tbody>
+<% @available_projects.each do |proj| %>
+<tr class="<%= cycle("odd", "even") %>">
+	<td><%= proj.name %></td>
+	<td align="center"><%= link_to l('favourite_projects.views.index.add_project'), {:controller => 'favourite_projects', :action => 'add_project', :id => proj.id}, :method => :post, :class => 'icon icon-add' %>	</td>
+</tr>
+<% end %>
+</tbody>
+</table>
+</div>
+<div id="favourites">
+<h3><%=l('favourite_projects.views.index.favourite_projects')%></h3>
+<table>
+<thead>
+<th>Project Name</th>
+<th></th>
+</thead>
+<tbody>
+<% @favourite_projects.each do |fav| %>
+<tr class="<%= cycle("odd", "even") %>">
+	<td><%= fav.project %></td>
+	<td align="center"><%= link_to(l(:button_delete), { :controller => 'favourite_projects', :action => 'remove_project', :id => fav.id },  :confirm => l(:text_are_you_sure), :method => :post, :class => 'icon icon-del')  %></td>
+</tr>
+<% end %>
+</tbody>
+</table>
+</div>
+
+<% content_for :header_tags do %>
+  <%= stylesheet_link_tag "favourites.css", :plugin => "redmine_favourite_projects", :media => "screen" %>
+<% end %>

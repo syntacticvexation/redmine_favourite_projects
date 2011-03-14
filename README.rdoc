@@ -1,0 +1,7 @@
+= favourite_projects
+
+A plugin for Redmine to provide a list of favourite projects on My Page
+
+== Installation
+
+Just run rake db:migrate_plugins
