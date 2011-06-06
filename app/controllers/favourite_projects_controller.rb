@@ -12,6 +12,7 @@ class FavouriteProjectsController < ApplicationController
     @project.user_id = User.current.id
     if request.post?
       if @project.save then
+	flash[:notice] = 'Favourite project added.'
         redirect_to :controller => 'favourite_projects', :action => 'index'
       end
     end
