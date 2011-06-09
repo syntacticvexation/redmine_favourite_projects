@@ -1,0 +1,11 @@
+# Bulgarian translation by Ivan Cenov
+# i_cenov@botevgrad.com
+bg:
+  favourite_projects_box: Моите актуални проекти
+  favourite_projects:
+        views:
+            index:
+                title: Администрация на моите проекти
+                favourite_projects: Моите актуални проекти
+                available_projects: Налични проекти, в които участвам
+                add_project: Добавяне на този проект
