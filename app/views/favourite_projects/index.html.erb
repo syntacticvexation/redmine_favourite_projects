@@ -8,7 +8,7 @@
 <tbody>
 <% @available_projects.each do |proj| %>
 <tr class="<%= cycle("odd", "even") %>">
-	<td><%= proj.name %></td>
+	<td><%= link_to proj, {:controller => 'projects', :action => proj.identifier} %></td>
 	<td align="center"><%= link_to l('favourite_projects.views.index.add_project'), {:controller => 'favourite_projects', :action => 'add_project', :id => proj.id}, :method => :post, :class => 'icon icon-add' %>	</td>
 </tr>
 <% end %>
@@ -25,7 +25,7 @@
 <tbody>
 <% @favourite_projects.each do |fav| %>
 <tr class="<%= cycle("odd", "even") %>">
-	<td><%= fav.project %></td>
+	<td><%= link_to fav.project, {:controller => 'projects', :action => fav.project.identifier} %></td>
 	<td align="center"><%= link_to(l(:button_delete), { :controller => 'favourite_projects', :action => 'remove_project', :id => fav.id },  :confirm => l(:text_are_you_sure), :method => :post, :class => 'icon icon-del')  %></td>
 </tr>
 <% end %>

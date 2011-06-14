@@ -1,7 +1,9 @@
-# English strings go here for Rails i18n
 en:
   favourite_projects_box: Favourite Projects
   favourite_projects:
+        controllers:
+            add_project_notice: Favourite project added.
+
         views:
             index:
                 title: Favourite Projects Manager
