@@ -1,7 +1,11 @@
 = favourite_projects
 
-A plugin for Redmine to provide a list of favourite projects on My Page
+A plugin for Redmine to provide a list of favourite projects on My page
 
 == Installation
 
 Just run rake db:migrate_plugins
+
+== Usage
+
+Users can add to their favourite projects through My account -> Favourite Projects. Click on My page -> Personalize this page to add the Favourite Projects My page block.
