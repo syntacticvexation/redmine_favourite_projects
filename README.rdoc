@@ -8,4 +8,4 @@ Just run rake db:migrate_plugins
 
 == Usage
 
-Users can add to their favourite projects through My account -> Favourite Projects. Click on My page -> Personalize this page to add the Favourite Projects My page block.
+Users can add to their favourite projects through <b>My account</b> -> <b>Favourite Projects</b>. Click on <b>My page</b> -> <b>Personalize this page</b> to add the Favourite Projects My page block.
