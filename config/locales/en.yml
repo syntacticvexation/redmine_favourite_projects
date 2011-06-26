@@ -9,4 +9,5 @@ en:
                 title: Favourite Projects Manager
                 favourite_projects: Favourite Projects
                 available_projects: Available Projects
+                header_projects_cols: Project Name
                 add_project: Add this project

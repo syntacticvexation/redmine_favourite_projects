@@ -9,4 +9,5 @@ it:
                 title: Gestione Progetti Preferiti
                 favourite_projects: Progetti preferiti
                 available_projects: Progetti disponibili
+                header_projects_cols: Nome Progetto
                 add_project: Aggiungi questo progetto
