@@ -1,0 +1,13 @@
+de:
+  favourite_projects_box: bevorzugte Projekte
+  favourite_projects:
+        controllers:
+            add_project_notice: Projekt als Favorit hinzugefügt.
+ 
+        views:
+            index:
+                title: Bevorzugte Projekte verwalten
+                favourite_projects: bevorzugte Projekte
+                available_projects: verfügbare Projekte
+                header_projects_cols: Projektebezeichnung
+                add_project: Projekt als Favorit aufnehmen
