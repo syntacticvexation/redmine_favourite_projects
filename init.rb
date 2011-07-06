@@ -14,6 +14,11 @@ Redmine::Plugin.register :redmine_favourite_projects do
   description 'This is a plugin for Redmine to provide a list of favourite projects on My Page'
   version '0.0.2'
   url 'https://github.com/syntacticvexation/redmine_favourite_projects'
+  settings :default => {
+    'modifyProjectJumpList' => false
+    },
+    :partial => 'redmine_favourite_projects'
+
 end
 
 # initialize hook
