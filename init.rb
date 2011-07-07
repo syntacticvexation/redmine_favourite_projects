@@ -1,5 +1,13 @@
 require 'redmine'
 
+# Patches to the Redmine core
+require 'dispatcher'
+
+Dispatcher.to_prepare :redmine_favourite_projects do
+  require_dependency 'application_helper'
+  ApplicationHelper.send(:include, FavouriteProjectsApplicationHelperPatch) unless ApplicationHelper.included_modules.include?(FavouriteProjectsApplicationHelperPatch)
+end
+
 Redmine::Plugin.register :redmine_favourite_projects do
   name 'Redmine Favourite Projects plugin'
   author 'Syntactic Vexation'
