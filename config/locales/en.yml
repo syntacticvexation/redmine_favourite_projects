@@ -11,3 +11,5 @@ en:
                 available_projects: Available Projects
                 header_projects_cols: Project Name
                 add_project: Add this project
+            settings:
+                modify_project_jump_list: Display favourites at the top of 'Jump to a project' dropdown
