@@ -1,0 +1,11 @@
+<div id="fav_projs">
+<% FavouriteProject.find(:all, :conditions => "user_id = #{User.current.id}",:include => :project, :order => 'projects.name').each do |fav|%>
+	<li><%= link_to fav.project, {:controller => 'projects', :action => fav.project.identifier}, :class => 'icon icon-projects' %></li>
+<% end %>
+</div>
+<script>
+fav_projs_ = document.getElementById("fav_projs");
+fav_menu_ = document.getElementById("favourite-menu");
+fav_menu_.innerHTML = fav_projs_.innerHTML;
+fav_projs_.innerHTML = "";
+</script>
