@@ -1,5 +1,7 @@
 <h3><%= l('favourite_projects_box')%></h3>
 
 <% FavouriteProject.find(:all, :conditions => "user_id = #{User.current.id}",:include => :project, :order => 'projects.name').each do |fav|%>
+    <% if (!fav.project.nil?) %>
 	<p><%= link_to fav.project, {:controller => 'projects', :action => fav.project.identifier}, :class => 'icon icon-projects' %></p>
+    <% end %>
 <% end %>
