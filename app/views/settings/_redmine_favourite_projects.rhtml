@@ -1,7 +1,10 @@
 <div class="tabular settings">
 	<p>
-		<label><%= l('favourite_projects.views.settings.modify_project_jump_list') %></label>
+		<p><label><%= l('favourite_projects.views.settings.modify_project_jump_list') %></label>
 		<%= check_box_tag("settings[modifyProjectJumpList]",0,@settings['modifyProjectJumpList']) %>
-		<br />
+		</p>
+		<p><label><%= l('favourite_projects.views.settings.modify_top_menu') %></label>
+		<%= check_box_tag("settings[modifyTopMenu]",0,@settings['modifyTopMenu']) %>
+		</p>
 	</p>
 </div>

@@ -17,7 +17,8 @@ Redmine::Plugin.register :redmine_favourite_projects do
 
   
   settings :default => {
-    'modifyProjectJumpList' => false
+    'modifyProjectJumpList' => false,
+    'modifyTopMenu' => false
     },
     :partial => 'redmine_favourite_projects'
   
@@ -26,7 +27,7 @@ Redmine::Plugin.register :redmine_favourite_projects do
     :caption => '',
     :html => { :id => 'favourite-menu' },
     :param => :project_id,
-    :if => Proc.new { User.current.logged? }
+    :if => Proc.new { User.current.logged? and Setting.plugin_redmine_favourite_projects['modifyTopMenu'] }
   }
 end
 

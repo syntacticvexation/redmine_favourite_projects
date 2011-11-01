@@ -13,3 +13,4 @@ en:
                 add_project: Add this project
             settings:
                 modify_project_jump_list: Display favourites at the top of 'Jump to a project' dropdown
+                modify_top_menu: Display favourites on top menu
