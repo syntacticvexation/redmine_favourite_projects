@@ -1,6 +1,8 @@
 <div id="fav_projs">
 <% FavouriteProject.find(:all, :conditions => "user_id = #{User.current.id}",:include => :project, :order => 'projects.name').each do |fav|%>
+    <% if (!fav.project.nil?) %>
 	<li><%= link_to fav.project, {:controller => 'projects', :action => fav.project.identifier}, :class => 'icon icon-projects' %></li>
+    <% end %>
 <% end %>
 </div>
 <script>
