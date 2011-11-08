@@ -13,3 +13,5 @@ bg:
                 available_projects: Налични проекти, в които участвам
                 header_projects_cols: Име на проект
                 add_project: Добавяне на този проект
+            settings:
+                modify_project_jump_list: Показване на актуалните проекти в началото на списъка за директен избор
