@@ -1,3 +1,7 @@
+0.3 (11-11-2011)
+    * Favourites now deleted when associated user or project gets deleted.
+0.2.0
+    * Favourites can now be added to Top Menu and configurable through settings.
 0.1.0 (7-7-2011)
     * Favourites can now be added to Jump to a Project dropdown and configurable through settings. 
 0.0.2
