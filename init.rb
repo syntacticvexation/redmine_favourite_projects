@@ -5,14 +5,25 @@ require 'dispatcher'
 
 Dispatcher.to_prepare :redmine_favourite_projects do
   require_dependency 'application_helper'
-  ApplicationHelper.send(:include, FavouriteProjectsApplicationHelperPatch) unless ApplicationHelper.included_modules.include?(FavouriteProjectsApplicationHelperPatch)
+
+  unless Project.included_modules.include?(FavouriteProjectsProjectPatch)
+    Project.send(:include, FavouriteProjectsProjectPatch)
+  end
+
+  unless User.included_modules.include?(FavouriteProjectsUserPatch)
+    User.send(:include, FavouriteProjectsUserPatch)
+  end
+  
+  unless ApplicationHelper.included_modules.include?(FavouriteProjectsApplicationHelperPatch)
+    ApplicationHelper.send(:include, FavouriteProjectsApplicationHelperPatch)
+  end
 end
 
 Redmine::Plugin.register :redmine_favourite_projects do
   name 'Redmine Favourite Projects plugin'
   author 'Syntactic Vexation'
-  description 'This is a plugin for Redmine to provide a list of favourite projects on My Page'
-  version '0.2.0'
+  description 'This is a plugin for Redmine to provide a list of favourite projects on My Page, Top Menu or Project Jumplist'
+  version '0.3'
   url 'https://github.com/syntacticvexation/redmine_favourite_projects'
 
   

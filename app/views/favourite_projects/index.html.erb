@@ -24,12 +24,10 @@
 </thead>
 <tbody>
 <% @favourite_projects.each do |fav| %>
-  <% if (!fav.project.nil?) %>
-    <tr class="<%= cycle("odd", "even") %>">
+<tr class="<%= cycle("odd", "even") %>">
 	<td><%= link_to fav.project, {:controller => 'projects', :action => fav.project.identifier} %></td>
 	<td align="center"><%= link_to(l(:button_delete), { :controller => 'favourite_projects', :action => 'remove_project', :id => fav.id },  :confirm => l(:text_are_you_sure), :method => :post, :class => 'icon icon-del')  %></td>
-    </tr>
-  <% end %>
+</tr>
 <% end %>
 </tbody>
 </table>
