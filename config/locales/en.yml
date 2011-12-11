@@ -1,16 +1,16 @@
 en:
-  favourite_projects_box: Favourite Projects
+  favourite_projects_box: Favorite Projects
   favourite_projects:
         controllers:
-            add_project_notice: Favourite project added.
+            add_project_notice: Favorite project added.
 
         views:
             index:
-                title: Favourite Projects Manager
-                favourite_projects: Favourite Projects
+                title: Favorite Projects Manager
+                favourite_projects: Favorite Projects
                 available_projects: Available Projects
                 header_projects_cols: Project Name
                 add_project: Add this project
             settings:
-                modify_project_jump_list: Display favourites at the top of 'Jump to a project' dropdown
-                modify_top_menu: Display favourites on top menu
+                modify_project_jump_list: Display favorites at the top of 'Jump to a project' dropdown
+                modify_top_menu: Display favorites on top menu
