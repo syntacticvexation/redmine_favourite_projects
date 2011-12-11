@@ -1,6 +1,6 @@
 = favourite_projects
 
-A plugin for Redmine to provide a list of favourite projects on My page
+This is a plugin for Redmine to provide a list of favourite projects on My Page, Top Menu or Project Jumplist
 
 == Installation
 
@@ -10,4 +10,4 @@ Just run rake db:migrate_plugins
 
 Users can add to their favourite projects through <b>My account</b> -> <b>Favourite Projects</b>. Click on <b>My page</b> -> <b>Personalize this page</b> to add the Favourite Projects My page block.
 
-Additionally favourite projects can be added to the <b>Jump to a Project</b> dropdown through the plugin's <b>Settings</b> page.
+Additionally favourite projects can be added to the <b>Jump to a Project</b> dropdown or Top Menu through the plugin's <b>Settings</b> page.
