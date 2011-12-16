@@ -4,6 +4,9 @@ en-GB:
         controllers:
             add_project_notice: Favourite project added.
 
+        detailed:
+            header_go_to_module: Go to module
+
         views:
             index:
                 title: Favourite Projects Manager
@@ -12,5 +15,6 @@ en-GB:
                 header_projects_cols: Project Name
                 add_project: Add this project
             settings:
+                show_detailed_project_view: Show tabular view of projects on My Page with links to modules
                 modify_project_jump_list: Display favourites at the top of 'Jump to a project' dropdown
                 modify_top_menu: Display favourites on top menu

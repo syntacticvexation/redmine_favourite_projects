@@ -28,6 +28,7 @@ Redmine::Plugin.register :redmine_favourite_projects do
 
   
   settings :default => {
+    'showDetailedProjectView' => true,
     'modifyProjectJumpList' => false,
     'modifyTopMenu' => false
     },

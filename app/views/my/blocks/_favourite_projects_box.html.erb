@@ -1,5 +1,30 @@
 <h3><%= l('favourite_projects_box')%></h3>
 
-<% FavouriteProject.find(:all, :conditions => "user_id = #{User.current.id}",:include => :project, :order => 'projects.name').each do |fav|%>
-	<p><%= link_to fav.project, {:controller => 'projects', :action => fav.project.identifier}, :class => 'icon icon-projects' %></p>
+<% if (Setting.plugin_redmine_favourite_projects['showDetailedProjectView']) %>
+    <div class="autoscroll">
+    <table class="list">
+      <thead><tr>
+	    <th><%=l(:label_project)%></th>
+      <!-- <th><%=l(:field_description)%></th> -->
+	    <th><%=l('favourite_projects.detailed.header_go_to_module')%></th>
+	    <th><%=l(:field_created_on)%></th>
+      </tr></thead>
+      <tbody>
+    <% project_tree(FavouriteProject.find(:all, :conditions => "user_id = #{User.current.id}",:include => :project, :order => 'projects.name').collect{ |fav| fav.project } ) do |project, level| %>
+      <tr class="<%= cycle("odd", "even") %> <%= project.css_classes %> <%= level > 0 ? "idnt idnt-#{level}" : nil %>">
+	    <td class="name"><span title="<%= project.short_description %>"><%= link_to_project(project, {:action => 'show'}, :title => project.short_description) %></span></td>
+      <!-- <td><%= project.short_description %></td> -->
+	    <td><%= favourite_project_modules_links(project) %></td>
+	    <td align="center"><%= format_date(project.created_on) %></td>
+	    
+      </tr>
+    <% end %>
+      </tbody>
+    </table>
+    </div>
+<% else %>
+    <% FavouriteProject.find(:all, :conditions => "user_id = #{User.current.id}",:include => :project, :order => 'projects.name').each do |fav|%>
+	    <p><%= link_to fav.project, {:controller => 'projects', :action => fav.project.identifier}, :class => 'icon icon-projects' %></p>
+    <% end %>
 <% end %>
+

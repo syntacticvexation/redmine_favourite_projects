@@ -1,5 +1,8 @@
 <div class="tabular settings">
 	<p>
+		<p><label><%= l('favourite_projects.views.settings.show_detailed_project_view') %></label>
+		<%= check_box_tag("settings[showDetailedProjectView]",0,@settings['showDetailedProjectView']) %>
+		</p>
 		<p><label><%= l('favourite_projects.views.settings.modify_project_jump_list') %></label>
 		<%= check_box_tag("settings[modifyProjectJumpList]",0,@settings['modifyProjectJumpList']) %>
 		</p>
