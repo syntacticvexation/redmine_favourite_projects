@@ -6,6 +6,9 @@ bg:
         controllers:
             add_project_notice: Добавен актуален проект.
 
+        detailed:
+            header_go_to_module: Активни модули
+
         views:
             index:
                 title: Администрация на моите проекти
@@ -14,5 +17,6 @@ bg:
                 header_projects_cols: Име на проект
                 add_project: Добавяне на този проект
             settings:
+                show_detailed_project_view: Показване на проектите в табличен вид в "Моята страница" с връзки към модулите
                 modify_project_jump_list: Показване на актуалните проекти в началото на списъка за директен избор
                 modify_top_menu: Показване на актуалните проекти в главното меню
