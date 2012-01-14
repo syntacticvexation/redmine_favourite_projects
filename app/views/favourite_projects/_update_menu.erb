@@ -1,7 +1,7 @@
 <% if (Setting.plugin_redmine_favourite_projects['modifyTopMenu']) %>
 <div id="fav_projs">
 <% FavouriteProject.find(:all, :conditions => "user_id = #{User.current.id}",:include => :project, :order => 'projects.name').each do |fav|%>
-	<li><%= link_to fav.project, {:controller => 'projects', :action => fav.project.identifier}, :class => 'icon icon-projects' %></li>
+	<li><%= link_to_project fav.project, {}, :class => 'icon icon-projects' %></li>
 <% end %>
 </div>
   <script>

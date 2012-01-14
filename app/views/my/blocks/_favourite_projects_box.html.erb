@@ -27,7 +27,7 @@
     </div>
 <% else %>
     <% FavouriteProject.find(:all, :conditions => "user_id = #{User.current.id}",:include => :project, :order => 'projects.name').each do |fav|%>
-	    <p><%= link_to fav.project, {:controller => 'projects', :action => fav.project.identifier}, :class => 'icon icon-projects' %></p>
+	    <p><%= link_to_project fav.project, {}, :class => 'icon icon-projects' %></p>
     <% end %>
 <% end %>
 
