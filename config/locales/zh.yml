@@ -1,0 +1,21 @@
+zh:
+  favourite_projects_box: 项目收藏夹
+  favourite_projects:
+        controllers: 
+            add_project_notice: 项目已收藏。
+
+    detailed:
+        header_go_to_module: 跳转到模块
+
+    views:
+        index:
+            title: 项目收藏管理器
+            favourite_projects: 已收藏项目
+            available_projects: 可选项目
+            header_projects_cols: 项目名称
+            add_project: 添加此项目至收藏夹
+        settings:
+            show_detailed_project_view: 在我的工作台的项目收藏夹区域中，显示项目相关的可用模块
+            modify_project_jump_list: 项目切换列表中，优先显示被收藏项目
+            modify_top_menu: 在顶部菜单中显示已收藏的项目
+
