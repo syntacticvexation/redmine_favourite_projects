@@ -1,3 +1,7 @@
+0.4.2
+    * Fixed tabulation problem with zh locale
+0.4.1
+    * Updated routes to be compatible with Redmine > 1.4
 0.4
     * Added separate English and British English locales
 0.3 (11-11-2011)
