@@ -17,6 +17,10 @@ Dispatcher.to_prepare :redmine_favourite_projects do
   unless ApplicationHelper.included_modules.include?(FavouriteProjectsApplicationHelperPatch)
     ApplicationHelper.send(:include, FavouriteProjectsApplicationHelperPatch)
   end
+  
+  unless MyHelper.included_modules.include?(FavouriteProjectsMyHelperPatch)
+    MyHelper.send(:include, FavouriteProjectsMyHelperPatch)
+  end
 end
 
 Redmine::Plugin.register :redmine_favourite_projects do
