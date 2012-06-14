@@ -1,0 +1,21 @@
+ja:
+  favourite_projects_box: お気に入りプロジェクト
+  favourite_projects:
+        controllers:
+            add_project_notice: お気に入りプロジェクトを追加
+
+        detailed:
+            header_go_to_module: モジュール
+
+        views:
+            index:
+                title: お気に入りプロジェクトの管理
+                favourite_projects: お気に入りプロジェクト
+                available_projects: プロジェクト一覧
+                header_projects_cols: プロジェクト名
+                add_project: プロジェクトを追加
+            settings:
+                show_detailed_project_view: マイページのプロジェクトビューでモジュールへのリンクを表示する
+                modify_project_jump_list: 「プロジェクトへ移動...」のドロップダウンにお気に入りプロジェクトを表示する
+                modify_top_menu: メニューにお気に入りプロジェクトを表示する
+
