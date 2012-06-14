@@ -28,7 +28,7 @@ module FavouriteProjectsApplicationHelperPatch
 	    { :value => url_for(:controller => 'projects', :action => 'show', :id => p, :jump => current_menu_item) }
 	  end
 	  s << '</select>'
-	  s
+	  s.html_safe
 	end
       else
         render_project_jump_box_without_favourite_projects
