@@ -17,7 +17,7 @@
       <tr class="<%= cycle("odd", "even") %> <%= project.css_classes %> <%= level > 0 ? "idnt idnt-#{level}" : nil %>">
 	    <td class="name"><span title="<%= project.short_description %>"><%= link_to_project(project, {:action => 'show'}, :class => 'icon icon-projects', :title => project.short_description) %></span></td>
       <!-- <td><%= project.short_description %></td> -->
-	    <td><%= favourite_project_modules_links(project) %></td>
+	    <td><%= raw favourite_project_modules_links(project) %></td>
 	    <td align="center"><%= format_date(project.created_on) %></td>
 	    
       </tr>
