@@ -1,9 +1,6 @@
 require 'redmine'
 
-# Patches to the Redmine core
-require 'dispatcher'
-
-Dispatcher.to_prepare :redmine_favourite_projects do
+ActionDispatch::Callbacks.to_prepare do
   require_dependency 'application_helper'
 
   unless Project.included_modules.include?(FavouriteProjectsProjectPatch)
