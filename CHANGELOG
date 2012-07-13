@@ -1,3 +1,5 @@
+0.4.5
+    * Reverted favourite_project_modules_links function modularity change to work with Redmine 1.4.x
 0.4.4
     * Added Japanese translation (with thanks to ksauzz)
 0.4.3
