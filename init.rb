@@ -1,22 +1,47 @@
 require 'redmine'
 
-ActionDispatch::Callbacks.to_prepare do
-  require_dependency 'application_helper'
+# Including dispatcher.rb in case of Rails 2.x
+require 'dispatcher' unless Rails::VERSION::MAJOR >= 3
 
-  unless Project.included_modules.include?(FavouriteProjectsProjectPatch)
-    Project.send(:include, FavouriteProjectsProjectPatch)
-  end
+if Rails::VERSION::MAJOR >= 3
+  ActionDispatch::Callbacks.to_prepare do
+    require_dependency 'application_helper'
 
-  unless User.included_modules.include?(FavouriteProjectsUserPatch)
-    User.send(:include, FavouriteProjectsUserPatch)
+    unless Project.included_modules.include?(FavouriteProjectsProjectPatch)
+      Project.send(:include, FavouriteProjectsProjectPatch)
+    end
+
+    unless User.included_modules.include?(FavouriteProjectsUserPatch)
+      User.send(:include, FavouriteProjectsUserPatch)
+    end
+    
+    unless ApplicationHelper.included_modules.include?(FavouriteProjectsApplicationHelperPatch)
+      ApplicationHelper.send(:include, FavouriteProjectsApplicationHelperPatch)
+    end
+    
+    unless MyHelper.included_modules.include?(FavouriteProjectsMyHelperPatch)
+      MyHelper.send(:include, FavouriteProjectsMyHelperPatch)
+    end
   end
-  
-  unless ApplicationHelper.included_modules.include?(FavouriteProjectsApplicationHelperPatch)
-    ApplicationHelper.send(:include, FavouriteProjectsApplicationHelperPatch)
-  end
-  
-  unless MyHelper.included_modules.include?(FavouriteProjectsMyHelperPatch)
-    MyHelper.send(:include, FavouriteProjectsMyHelperPatch)
+else
+  Dispatcher.to_prepare :redmine_favourite_projects do
+    require_dependency 'application_helper'
+
+    unless Project.included_modules.include?(FavouriteProjectsProjectPatch)
+      Project.send(:include, FavouriteProjectsProjectPatch)
+    end
+
+    unless User.included_modules.include?(FavouriteProjectsUserPatch)
+      User.send(:include, FavouriteProjectsUserPatch)
+    end    
+
+    unless ApplicationHelper.included_modules.include?(FavouriteProjectsApplicationHelperPatch)
+      ApplicationHelper.send(:include, FavouriteProjectsApplicationHelperPatch)
+    end
+
+    unless MyHelper.included_modules.include?(FavouriteProjectsMyHelperPatch)
+      MyHelper.send(:include, FavouriteProjectsMyHelperPatch)
+    end
   end
 end
 
