@@ -1,3 +1,5 @@
+0.5.1
+    * Opera bugfix (with thanks to logical-and)
 0.5
     * Made compatible with Redmine 2.0 (with thanks to ksauzz)
     * Cross-compatible with Redmine 1.x

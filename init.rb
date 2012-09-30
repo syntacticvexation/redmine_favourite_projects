@@ -49,7 +49,7 @@ Redmine::Plugin.register :redmine_favourite_projects do
   name 'Redmine Favourite Projects plugin'
   author 'Syntactic Vexation'
   description 'This is a plugin for Redmine to provide a list of favourite projects on My Page, Top Menu or Project Jumplist'
-  version '0.5'
+  version '0.5.1'
   url 'https://github.com/syntacticvexation/redmine_favourite_projects'
 
   
