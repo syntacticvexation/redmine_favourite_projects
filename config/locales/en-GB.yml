@@ -7,6 +7,10 @@ en-GB:
         detailed:
             header_go_to_module: Go to module
 
+        chosen_jump_box:
+            favourite_group: Favourites
+            other_group: Others
+
         views:
             index:
                 title: Favourite Projects Manager
