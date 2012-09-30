@@ -2,9 +2,11 @@
 
 This is a plugin for Redmine to provide a list of favourite projects on My Page, Top Menu or Project Jumplist
 
+Only Redmine 2.1.x and greater is now supported by this plugin.  For Redmine 1.x/2.0 support, use the legacy "redmine1.x/2.0-compatible" branch.
+
 == Installation
 
-Just run rake db:migrate_plugins
+Just run rake redmine:plugins
 
 == Usage
 

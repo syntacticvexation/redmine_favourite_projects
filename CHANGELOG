@@ -1,3 +1,5 @@
+0.6
+    * Converted jumpbox to a searchable jQuery version
 0.5.1
     * Opera bugfix (with thanks to logical-and)
 0.5
