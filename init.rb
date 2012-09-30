@@ -6,6 +6,7 @@ require 'dispatcher' unless Rails::VERSION::MAJOR >= 3
 if Rails::VERSION::MAJOR >= 3
   ActionDispatch::Callbacks.to_prepare do
     require_dependency 'application_helper'
+    require_dependency 'favourite_projects_searchbox_hook_listener'
 
     unless Project.included_modules.include?(FavouriteProjectsProjectPatch)
       Project.send(:include, FavouriteProjectsProjectPatch)
