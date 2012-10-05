@@ -5,9 +5,13 @@
 <% end %>
 </div>
   <script>
-  fav_projs_ = document.getElementById("fav_projs");
-  fav_menu_ = document.getElementById("favourite-menu");
-  fav_menu_.innerHTML = fav_projs_.innerHTML;
-  fav_projs_.innerHTML = "";
+  (function() {
+    var fav_projs_ = document.getElementById("fav_projs"),
+      fav_menu_ = document.getElementById("favourite-menu");
+
+			// Inject projects before menu, and dispose old menu container after
+     fav_menu_.parentNode.insertBefore(fav_projs_, fav_menu_);
+     fav_menu_.parentNode.removeChild(fav_menu_);
+	  })();
   </script>
 <% end %>
