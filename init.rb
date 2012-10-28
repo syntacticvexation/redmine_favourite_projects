@@ -4,7 +4,7 @@ require 'redmine'
 require 'dispatcher' unless Rails::VERSION::MAJOR >= 3
 
 if Rails::VERSION::MAJOR >= 3
-  ActionDispatch::Callbacks.to_prepare do
+  RedmineApp::Application.config.after_initialize do
     require_dependency 'application_helper'
     require_dependency 'favourite_projects_searchbox_hook_listener'
 
