@@ -9,6 +9,10 @@ bg:
         detailed:
             header_go_to_module: Активни модули
 
+        chosen_jump_box:
+            favourite_group: Актуални проекти
+            other_group: Други
+
         views:
             index:
                 title: Администрация на моите проекти
