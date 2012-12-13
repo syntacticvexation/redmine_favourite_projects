@@ -1,0 +1,24 @@
+ru:
+  favourite_projects_box: Избранные проекты
+  favourite_projects:
+        controllers:
+            add_project_notice: Проект добавлен в избранные.
+
+        detailed:
+            header_go_to_module: Перейти к модулю
+
+        chosen_jump_box:
+            favourite_group: Избранные
+            other_group: Другие
+
+        views:
+            index:
+                title: Управление избранными проектами
+                favourite_projects: Избранные проекты
+                available_projects: Доступные проекты
+                header_projects_cols: Имя проекта
+                add_project: Добавить этот проект
+            settings:
+                show_detailed_project_view: Отображать избранные проекты с закладками модулей на Моей странице
+                modify_project_jump_list: Отображать избранные сверху в виде выпадающего списка 'Перейти к проекту'
+                modify_top_menu: Отображать избранные в главном меню
