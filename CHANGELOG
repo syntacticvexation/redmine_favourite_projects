@@ -1,3 +1,5 @@
+0.6.2
+    * Added Russian translation (with thanks to AlexStein)
 0.6.1
     * modified assets paths to be relative to support redmine installs under subdirs
 0.6
