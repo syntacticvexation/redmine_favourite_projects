@@ -1,0 +1,15 @@
+fr:
+  favourite_projects_box: Projets Favoris
+  favourite_projects:
+        controllers:
+            add_project_notice: Projet favori ajouté.
+
+        views:
+            index:
+                title: Gestion projets favoris
+                favourite_projects: Projets favoris
+                available_projects: Projets disponibles
+                header_projects_cols: Nom du projet
+                add_project: Ajouter ce projet
+            settings:
+                modify_project_jump_list: Afficher les favoris en haut de boite de sélection 'Aller au projet'
