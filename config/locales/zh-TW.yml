@@ -12,7 +12,7 @@ zh-TW:
                 title: 收藏管理器
                 favourite_projects: 已收藏項目
                 available_projects: 可選項目
-                header_projects_cols: " "
+                header_projects_cols: "專案名稱"
                 add_project: 新增至收藏夾
         settings:
             show_detailed_project_view: 在我的工作台的項目收藏夾區域中，顯示項目相關的可用模組
