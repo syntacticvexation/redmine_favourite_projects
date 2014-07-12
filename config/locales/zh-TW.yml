@@ -9,9 +9,9 @@ zh-TW:
 
         views:
             index:
-                title: 收藏管理器
-                favourite_projects: 已收藏項目
-                available_projects: 可選項目
+                title: 專案收藏夾
+                favourite_projects: 已收藏專案
+                available_projects: 可選專案
                 header_projects_cols: "專案名稱"
                 add_project: 新增至收藏夾
         settings:
