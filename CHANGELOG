@@ -1,5 +1,8 @@
-0.6.4
+
+0.6.5
     * Fixed favourite project not being preselected in jumpbox when in active favourite project.
+0.6.4
+    * Added French translation (with thanks to Ludovic Meyer)
 0.6.3
     * Added Brazilian Portuguese translation (with thanks to Tarcisio Coutinho)
 0.6.2
