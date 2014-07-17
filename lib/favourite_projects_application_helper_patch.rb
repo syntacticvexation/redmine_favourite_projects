@@ -20,7 +20,7 @@ module FavouriteProjectsApplicationHelperPatch
 	  options =
 	    ("<option value=''>#{ l(:label_jump_to_a_project) }</option>" +
 	     "<optgroup label=\"#{ l('favourite_projects.chosen_jump_box.favourite_group')}\">").html_safe
-	  options << project_tree_options_for_select(favourites, :selected => @fav) do |p|
+	  options << project_tree_options_for_select(favourites, :selected => @project) do |p|
 	    { :value => project_path(:id => p, :jump => current_menu_item) }
 	  end 
     
