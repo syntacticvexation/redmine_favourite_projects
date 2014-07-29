@@ -1,4 +1,6 @@
 
+0.6.6
+    * Fixed tabulation for zh locale, added Traditional Chinese locale (with thanks to johnroyer)
 0.6.5
     * Fixed favourite project not being preselected in jumpbox when in active favourite project.
 0.6.4
