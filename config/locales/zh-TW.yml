@@ -1,0 +1,20 @@
+zh-TW:
+  favourite_projects_box: 專案收藏夾
+  favourite_projects:
+        controllers:
+            add_project_notice: 項目已收藏。
+
+        detailed:
+            header_go_to_module: 跳轉到模組
+
+        views:
+            index:
+                title: 專案收藏夾
+                favourite_projects: 已收藏專案
+                available_projects: 可選專案
+                header_projects_cols: "專案名稱"
+                add_project: 新增至收藏夾
+            settings:
+                show_detailed_project_view: 在「帳戶首頁」專案收藏夾區塊中，顯示項目相關的可用模組
+                modify_project_jump_list: 專案切換列表中，優先顯示被收藏專案
+                modify_top_menu: 在導航列中顯示已收藏的專案
