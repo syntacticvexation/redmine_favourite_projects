@@ -7,6 +7,10 @@ ja:
         detailed:
             header_go_to_module: モジュール
 
+        chosen_jump_box:
+            favourite_group: お気に入り
+            other_group: その他
+
         views:
             index:
                 title: お気に入りプロジェクトの管理
