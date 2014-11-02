@@ -1,6 +1,6 @@
 if Rails::VERSION::MAJOR >= 3
   RedmineApp::Application.routes.draw do
-    match 'favourite_projects/:action', :controller => 'favourite_projects'
+    match 'favourite_projects/:action', :controller => 'favourite_projects', :via => [:get, :post]
   end
 else
   ActionController::Routing::Routes.draw do |map|
