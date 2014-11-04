@@ -2,7 +2,7 @@ class FavouriteProjectsController < ApplicationController
   unloadable
 
   def index
-    @favourite_projects = FavouriteProject.find(:all,:conditions => ["user_id = ?", User.current.id],:include => :project, :order => 'projects.name')
+    @favourite_projects = User.current.ordered_favourite_projects
     @available_projects = Project.find_by_sql("select projects.* FROM projects, members WHERE project_id = projects.id and user_id = '#{User.current.id}' and project_id NOT IN (select project_id from favourite_projects where user_id = '#{User.current.id}') order by projects.name")
   end
   

@@ -24,7 +24,7 @@
 	    <th><%=l(:field_created_on)%></th>
       </tr></thead>
       <tbody>
-    <% project_tree(FavouriteProject.find(:all, :conditions => "user_id = #{User.current.id}",:include => :project, :order => 'projects.name').collect{ |fav| fav.project } ) do |project, level| %>
+    <% project_tree(User.current.ordered_favourite_projects.collect{ |fav| fav.project } ) do |project, level| %>
       <tr class="<%= cycle("odd", "even") %> <%= project.css_classes %> <%= level > 0 ? "idnt idnt-#{level}" : nil %>">
 	    <td class="name"><span title="<%= project.short_description %>"><%= link_to_project(project, {:action => 'show'}, :class => 'icon icon-projects', :title => project.short_description) %></span></td>
       <!-- <td><%= project.short_description %></td> -->
@@ -37,7 +37,7 @@
     </table>
     </div>
 <% else %>
-    <% FavouriteProject.find(:all, :conditions => "user_id = #{User.current.id}",:include => :project, :order => 'projects.name').each do |fav|%>
+    <% User.current.ordered_favourite_projects.each do |fav|%>
 	    <p><%= link_to_project fav.project, {}, :class => 'icon icon-projects' %></p>
     <% end %>
 <% end %>
