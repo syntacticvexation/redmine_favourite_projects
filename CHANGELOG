@@ -1,4 +1,7 @@
-
+0.7
+    * Upgraded chosen to fix issues filters not rendering
+    * Refactored FavouriteProject model access
+    * Fixed routes match error in Redmine 2.6.0
 0.6.6
     * Fixed tabulation for zh locale, added Traditional Chinese locale (with thanks to johnroyer)
 0.6.5
