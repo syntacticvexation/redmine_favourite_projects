@@ -1,0 +1,24 @@
+pl:
+  favourite_projects_box: Ulubione projekty
+  favourite_projects:
+        controllers:
+            add_project_notice: Projekt dodany do ulubionych
+
+        detailed:
+            header_go_to_module: Przejdź do modułu
+
+        chosen_jump_box:
+            favourite_group: Ulubione
+            other_group: Inne
+
+        views:
+            index:
+                title: Zarządzanie ulubionymi projektami
+                favourite_projects: Ulubione projekty
+                available_projects: Dostępne projekty
+                header_projects_cols: Nazwa projektu
+                add_project: Dodaj ten projekt
+            settings:
+                show_detailed_project_view: Pokaż na Mojej stronie listę projektów z linkami do modułów
+                modify_project_jump_list: Pokaż listę ulubionych na górze listy 'Skocz do projektu'
+                modify_top_menu: Pokaż ulubione projekty na górze strony
