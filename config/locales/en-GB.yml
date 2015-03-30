@@ -3,6 +3,10 @@ en-GB:
   favourite_projects:
         controllers:
             add_project_notice: Favourite project added.
+            user_settings_override_notice:
+                update: Custom display settings have been updated.
+                reset: Display settings reset to global defaults.
+                error: Something went wrong updating custom display settings
 
         detailed:
             header_go_to_module: Go to module
@@ -14,6 +18,9 @@ en-GB:
         views:
             index:
                 title: Favourite Projects Manager
+                customise_favourite_project_display: Customise Favourite Project Display
+                customise_favourite_project_display_disabled: These settings have been disabled by your Redmine administrator, global settings are in effect.
+                reset_to_defaults_button: Reset to global defaults
                 favourite_projects: Favourite Projects
                 available_projects: Available Projects
                 header_projects_cols: Project Name
@@ -22,3 +29,4 @@ en-GB:
                 show_detailed_project_view: Show tabular view of projects on My Page with links to modules
                 modify_project_jump_list: Display favourites at the top of 'Jump to a project' dropdown
                 modify_top_menu: Display favourites on top menu
+                allow_user_override: Allow users to override these settings

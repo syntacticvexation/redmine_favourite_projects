@@ -1,0 +1,18 @@
+<div id="customise">
+
+<h3><%=l('favourite_projects.views.index.customise_favourite_project_display')%></h3>
+
+<% if (Setting.plugin_redmine_favourite_projects['allowUserOverride']) %>
+	<div id="settings">
+	<%= form_tag({:action => 'save_user_settings'}) do %>
+	<div class="box tabular settings">
+		<%= render :partial => 'settings/checkboxes', :locals => {:should_include_user_override => false} %>
+	</div>
+	 	<%= submit_tag l(:button_apply) %>
+	 	<%= submit_tag l('favourite_projects.views.index.reset_to_defaults_button') %>
+	 <% end %>
+	</div>
+<% else %>
+	<p><%= l('favourite_projects.views.index.customise_favourite_project_display_disabled') %></p>
+<% end %>
+</div>

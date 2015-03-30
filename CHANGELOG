@@ -1,3 +1,5 @@
+0.8
+    * Added the ability for a user to override global display settings (if the administrator allows it)
 0.7
     * Upgraded chosen to fix issues filters not rendering
     * Refactored FavouriteProject model access

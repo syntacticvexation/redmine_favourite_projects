@@ -50,14 +50,15 @@ Redmine::Plugin.register :redmine_favourite_projects do
   name 'Redmine Favourite Projects plugin'
   author 'Syntactic Vexation'
   description 'This is a plugin for Redmine to provide a list of favourite projects on My Page, Top Menu or Project Jumplist'
-  version '0.7'
+  version '0.8'
   url 'https://github.com/syntacticvexation/redmine_favourite_projects'
 
   
   settings :default => {
     'showDetailedProjectView' => true,
     'modifyProjectJumpList' => false,
-    'modifyTopMenu' => false
+    'modifyTopMenu' => false,
+    'allowUserOverride' => true
     },
     :partial => 'redmine_favourite_projects'
   
@@ -66,7 +67,7 @@ Redmine::Plugin.register :redmine_favourite_projects do
     :caption => '',
     :html => { :id => 'favourite-menu' },
     :param => :project_id,
-    :if => Proc.new { User.current.logged? and Setting.plugin_redmine_favourite_projects['modifyTopMenu'] }
+    :if => Proc.new { User.current.logged? and Object.new.extend(FavouriteProjectsApplicationHelperPatch::InstanceMethods).calculated_favourite_projects_settings['modifyTopMenu'] }
   }
 end
 

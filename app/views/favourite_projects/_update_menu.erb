@@ -1,4 +1,4 @@
-<% if (Setting.plugin_redmine_favourite_projects['modifyTopMenu']) %>
+<% if (calculated_favourite_projects_settings['modifyTopMenu']) %>
 <div id="fav_projs">
 <% User.current.ordered_favourite_projects.each do |fav|%>
 	<li><%= link_to_project fav.project, {}, :class => 'icon icon-projects' %></li>

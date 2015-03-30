@@ -1,13 +1,1 @@
-<div class="tabular settings">
-	<p>
-		<p><label><%= l('favourite_projects.views.settings.show_detailed_project_view') %></label>
-		<%= check_box_tag("settings[showDetailedProjectView]",0,@settings['showDetailedProjectView']) %>
-		</p>
-		<p><label><%= l('favourite_projects.views.settings.modify_project_jump_list') %></label>
-		<%= check_box_tag("settings[modifyProjectJumpList]",0,@settings['modifyProjectJumpList']) %>
-		</p>
-		<p><label><%= l('favourite_projects.views.settings.modify_top_menu') %></label>
-		<%= check_box_tag("settings[modifyTopMenu]",0,@settings['modifyTopMenu']) %>
-		</p>
-	</p>
-</div>
+<%= render :partial => 'settings/checkboxes', :locals => {:should_include_user_override => true} %>
