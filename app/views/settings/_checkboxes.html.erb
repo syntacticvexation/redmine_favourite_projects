@@ -11,8 +11,9 @@
 
 <div class="tabular settings">
 		<% settings_labels.each do |setting, label| %>
-			<p><label><%= l(label) %></label>
-			<%= check_box_tag("settings[#{setting}]",0,@settings[setting.to_s]) %>
+			<p>
+				<label for="settings_<%= setting %>"><%= l(label) %></label>
+				<%= check_box_tag("settings[#{setting}]",0,@settings[setting.to_s]) %>
 			</p>
 		<% end %>
 </div>
