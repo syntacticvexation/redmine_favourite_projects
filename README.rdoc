@@ -13,3 +13,7 @@ Just run rake redmine:plugins
 Users can add to their favourite projects through <b>My account</b> -> <b>Favourite Projects</b>. Click on <b>My page</b> -> <b>Personalize this page</b> to add the Favourite Projects My page block.
 
 Additionally favourite projects can be added to the <b>Jump to a Project</b> dropdown or Top Menu through the plugin's <b>Settings</b> page.
+
+== Special Thanks
+
+A special thanks to all the project's contributors[https://github.com/syntacticvexation/redmine_favourite_projects/network/members] and especially, johnroyer[https://github.com/johnroyer] for many hours of assistance with plugin appearance and testing.
