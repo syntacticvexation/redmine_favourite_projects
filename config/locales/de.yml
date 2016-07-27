@@ -4,10 +4,21 @@ de:
         controllers:
             add_project_notice: Projekt als Favorit hinzugefügt.
  
+        detailed:
+            header_go_to_module: Gehe zu
+
+        chosen_jump_box:
+            favourite_group: Favoriten
+            other_group: Weitere
+
         views:
             index:
                 title: Bevorzugte Projekte verwalten
-                favourite_projects: bevorzugte Projekte
-                available_projects: verfügbare Projekte
-                header_projects_cols: Projektebezeichnung
+                favourite_projects: Bevorzugte Projekte
+                available_projects: Verfügbare Projekte
+                header_projects_cols: Projektbezeichnung
                 add_project: Projekt als Favorit aufnehmen
+            settings:
+                show_detailed_project_view: Zeige auf 'Meine Seite' bevorzugte Projekte in der Tabellenansicht an
+                modify_project_jump_list: Zeige Favoriten in der Dropdownliste als erstes an
+                modify_top_menu: Zeige Favoriten in Hauptmenü an
