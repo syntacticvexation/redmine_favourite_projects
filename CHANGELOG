@@ -1,3 +1,8 @@
+0.7.1
+    * Added Polish translation (with thanks to darioo)
+    * Fixed incorrect path to chosen-sprite.png (with thanks to Florian Kaiser)
+    * Fix for project dropdown box color, as it was white, and therefore invisible (with thanks to unseenline)
+    * Added missing German translations (with thanks to jwciss)
 0.7
     * Upgraded chosen to fix issues filters not rendering
     * Refactored FavouriteProject model access
