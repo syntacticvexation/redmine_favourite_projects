@@ -9,7 +9,7 @@ zh:
                 error: 更新自定义设置时出错。请联系管理员。
 
         detailed:
-            header_go_to_module: Go to module
+            header_go_to_module: 跳转到模块 ...
 
         chosen_jump_box:
             favourite_group: 已收藏
