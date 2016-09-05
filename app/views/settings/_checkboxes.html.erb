@@ -1,0 +1,19 @@
+<%
+	settings_labels = {:showDetailedProjectView =>  'favourite_projects.views.settings.show_detailed_project_view',
+			:modifyProjectJumpList => 'favourite_projects.views.settings.modify_project_jump_list',
+			:modifyTopMenu => 'favourite_projects.views.settings.modify_top_menu'			
+			}
+
+	if defined? should_include_user_override and should_include_user_override
+		settings_labels[:allowUserOverride] = 'favourite_projects.views.settings.allow_user_override'
+	end
+%>
+
+<div class="tabular settings">
+		<% settings_labels.each do |setting, label| %>
+			<p>
+				<label for="settings_<%= setting %>"><%= l(label) %></label>
+				<%= check_box_tag("settings[#{setting}]",0,@settings[setting.to_s]) %>
+			</p>
+		<% end %>
+</div>
