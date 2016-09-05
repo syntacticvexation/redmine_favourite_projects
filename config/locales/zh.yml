@@ -3,13 +3,24 @@ zh:
   favourite_projects:
         controllers: 
             add_project_notice: 项目已收藏。
+            user_settings_override_notice:
+                update: 自定义显示设置已更新。
+                reset: 显示设置重置为全局默认。
+                error: 更新自定义设置时出错。请联系管理员。
 
         detailed:
-            header_go_to_module: 跳转到模块
+            header_go_to_module: Go to module
+
+        chosen_jump_box:
+            favourite_group: 已收藏
+            other_group: 其他
 
         views:
             index:
                 title: 项目收藏管理器
+                customise_favourite_project_display: 自定义项目收藏显示配置
+                customise_favourite_project_display_disabled: 自定义设置已被管理员禁用，当前全局默认设置有效。
+                reset_to_defaults_button: 重置为全局默认
                 favourite_projects: 已收藏项目
                 available_projects: 可选项目
                 header_projects_cols: 项目名称
@@ -18,4 +29,4 @@ zh:
                 show_detailed_project_view: 在我的工作台的项目收藏夹区域中，显示项目相关的可用模块
                 modify_project_jump_list: 项目切换列表中，优先显示被收藏项目
                 modify_top_menu: 在顶部菜单中显示已收藏的项目
-
+                allow_user_override: 允许用户覆盖设置
