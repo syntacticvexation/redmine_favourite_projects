@@ -6,6 +6,7 @@ module FavouriteProjectsApplicationHelperPatch
 
     base.class_eval do
       alias_method_chain :render_project_jump_box, :favourite_projects
+      alias_method :calculated_favourite_projects_settings, :calculated_favourite_projects_settings
     end
   end
   
