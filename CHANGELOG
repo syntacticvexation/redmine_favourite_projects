@@ -1,3 +1,6 @@
+0.9
+    * Fixes links are not displayed in the topbar, but in bottom of each page
+    * Version bump to chosen_js 1.6.2
 0.8.2
     * Updated Simplified Chinese (with thanks to archonwang)
 0.8.1

@@ -23,6 +23,10 @@ if Rails::VERSION::MAJOR >= 3
     unless MyHelper.included_modules.include?(FavouriteProjectsMyHelperPatch)
       MyHelper.send(:include, FavouriteProjectsMyHelperPatch)
     end
+
+    unless Redmine::MenuManager::MenuHelper.included_modules.include?(FavouriteProjectsMenuPatch)
+      Redmine::MenuManager::MenuHelper.send(:include, FavouriteProjectsMenuPatch)
+    end
   end
 else
   Dispatcher.to_prepare :redmine_favourite_projects do
@@ -43,6 +47,10 @@ else
     unless MyHelper.included_modules.include?(FavouriteProjectsMyHelperPatch)
       MyHelper.send(:include, FavouriteProjectsMyHelperPatch)
     end
+
+    unless Redmine::MenuManager::MenuHelper.included_modules.include?(FavouriteProjectsMenuPatch)
+      Redmine::MenuManager::MenuHelper.send(:include, FavouriteProjectsMenuPatch)
+    end
   end
 end
 
@@ -50,7 +58,7 @@ Redmine::Plugin.register :redmine_favourite_projects do
   name 'Redmine Favourite Projects plugin'
   author 'Syntactic Vexation'
   description 'This is a plugin for Redmine to provide a list of favourite projects on My Page, Top Menu or Project Jumplist'
-  version '0.8.2'
+  version '0.9'
   url 'https://github.com/syntacticvexation/redmine_favourite_projects'
 
   
@@ -61,18 +69,9 @@ Redmine::Plugin.register :redmine_favourite_projects do
     'allowUserOverride' => true
     },
     :partial => 'redmine_favourite_projects'
-  
-  menu :top_menu, :favourite_menu, '',
-  {
-    :caption => '',
-    :html => { :id => 'favourite-menu' },
-    :param => :project_id,
-    :if => Proc.new { User.current.logged? and Object.new.extend(FavouriteProjectsApplicationHelperPatch::InstanceMethods).calculated_favourite_projects_settings['modifyTopMenu'] }
-  }
 end
 
 # initialize hook
 class FavouritesEditHook < Redmine::Hook::ViewListener
-  render_on :view_layouts_base_body_bottom, :partial => 'favourite_projects/update_menu'
   render_on :view_my_account_contextual, :inline => "| <%= link_to(l('favourite_projects_box'), { :controller => 'favourite_projects', :action => 'index' }) %>"
 end
