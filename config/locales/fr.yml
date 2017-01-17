@@ -1,13 +1,13 @@
-#Laurent HADJADJ - 09/11/2016
+#Laurent HADJADJ - 12/01/2017
 fr:
   favourite_projects_box: Projet Favori
   favourite_projects:
         controllers:
             add_project_notice: Projet favori ajouté.
             user_settings_override_notice:
-                update: "Les paramètres de l'affichage personnalisé ont été mises à jour."
-                reset: "Mettre les paramètre d'affichage par défaut."
-                error: "Une erreur s'est produite pendant ma mise à jour des paramètres d'affichage"
+                update: "Les paramètres de l'affichage personnalisé ont été mis à jour."
+                reset: "Mettre les paramètres d'affichage par défaut."
+                error: "Une erreur s'est produite pendant la mise à jour des paramètres d'affichage"
 
         detailed:
             header_go_to_module: Aller au module
@@ -21,13 +21,13 @@ fr:
                 title: Gestion des projets favoris
                 customise_favourite_project_display: Affichage du projet favori personnalisé
                 customise_favourite_project_display_disabled: "Ce paramètre a été désactivé par l'administrateur."
-                reset_to_defaults_button: Retour au paramètre par défaut
+                reset_to_defaults_button: Retour aux paramètres par défaut
                 favourite_projects: Projets favoris
                 available_projects: Projets disponibles
                 header_projects_cols: Nom du projet
                 add_project: Ajouter ce projet
             settings:
-                modify_project_jump_list: Afficher les favoris en haut de boite de sélection - Aller au projet
-                show_detailed_project_view: Afficher les tableau de suivi des projets Ma Page
+                modify_project_jump_list: Affiche les favoris en haut de la boite de sélection - Aller au projet
+                show_detailed_project_view: Affiche les tableaux de suivi des projets Ma Page
                 modify_top_menu: Affiche les favoris dans la barre de menu
                 allow_user_override: Permet à l'utilisateur de modifier ces paramètres
