@@ -23,7 +23,16 @@ module FavouriteProjectsMenuPatch
             links << link_to(fav.project.name, fav.project, :class => 'icon icon-projects')
           end
 
-          links.empty? ? nil : content_tag('ul', links.join.html_safe)
+          #links.empty? ? nil : content_tag('ul', links.join.html_safe)
+          unless links.empty?
+                content_tag(:ul, :class => '') do
+                        links.collect do |x|
+                                content_tag(:li, x)
+                        end.join.html_safe
+                end
+          end
+
+        
       else
         render_menu_without_favourite_projects(menu, project)
       end
