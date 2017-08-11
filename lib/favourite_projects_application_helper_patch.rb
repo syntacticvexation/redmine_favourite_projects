@@ -16,26 +16,26 @@ module FavouriteProjectsApplicationHelperPatch
       if calculated_favourite_projects_settings['modifyProjectJumpList']
 		    return unless User.current.logged?
 		    favourites = User.current.ordered_favourite_projects.collect(&:project).compact.uniq
-		    projects = User.current.memberships.collect(&:project).compact.uniq - favourites
+		    projects = projects_for_jump_box(User.current) - favourites
 
-    		if projects.any? or favourites.any?
-    		  options =
-    		    ("<option value=''>#{ l(:label_jump_to_a_project) }</option>" +
-    		     "<optgroup label=\"#{ l('favourite_projects.chosen_jump_box.favourite_group')}\">").html_safe
-    		  options << project_tree_options_for_select(favourites, :selected => @project) do |p|
-    		    { :value => project_path(:id => p, :jump => current_menu_item) }
-    		  end 
-    	    
-    		  options <<
-    		    ("<optgroup label=\"#{ l('favourite_projects.chosen_jump_box.other_group')}\">").html_safe
+        if @project && @project.persisted?
+          text = @project.name_was
+        end
+        text ||= l(:label_jump_to_a_project)
+        url = autocomplete_projects_path(:format => 'js', :jump => current_menu_item)
 
-    		  options << project_tree_options_for_select(projects, :selected => @project) do |p|
-    		    { :value => project_path(:id => p, :jump => current_menu_item) }
-    		  end
+        trigger = content_tag('span', text, :class => 'drdn-trigger')
+        q = text_field_tag('q', '', :id => 'projects-quick-search', :class => 'autocomplete', :data => {:automcomplete_url => url}, :autocomplete => 'off')
+        all = link_to(l(:label_project_all), projects_path(:jump => current_menu_item), :class => (@project.nil? && controller.class.main_menu ? 'selected' : nil))
+        content = content_tag('div',
+              content_tag('div', q, :class => 'quick-search') +
+              content_tag('div', render_projects_for_jump_box(favourites, @project), :class => 'drdn-items projects selection') +
+              content_tag('div', render_projects_for_jump_box(projects, @project), :class => 'drdn-items projects selection') +
+              content_tag('div', all, :class => 'drdn-items all-projects selection'),
+            :class => 'drdn-content'
+          )
 
-    		  select_tag('project_quick_jump_box', options, 
-    		  	:onchange => 'if (this.value != \'\') { window.location = this.value; }')
-    		end
+        content_tag('div', trigger + content, :id => "project-jump", :class => "drdn")
       else
         render_project_jump_box_without_favourite_projects
       end
