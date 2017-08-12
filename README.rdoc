@@ -4,8 +4,8 @@ This is a plugin for Redmine to provide a list of favourite projects on My Page,
 
 Only Redmine 3.4.x and greater is now supported by this plugin.  
 
-For Redmine 2.1.x up to 3.3.x, use the legacy "redmine3.0-3.3-compatible" branch.
-For Redmine 1.x/2.0 support, use the legacy "redmine1.x/2.0-compatible" branch.
+* For Redmine 2.1.x up to 3.3.x, use the legacy "redmine3.0-3.3-compatible" branch.
+* For Redmine 1.x/2.0 support, use the legacy "redmine1.x/2.0-compatible" branch.
 
 == Installation
 
