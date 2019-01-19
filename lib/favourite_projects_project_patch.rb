@@ -8,3 +8,5 @@ module FavouriteProjectsProjectPatch
     end
   end
 end
+
+Project.send(:include, FavouriteProjectsProjectPatch)

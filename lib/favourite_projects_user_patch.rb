@@ -12,3 +12,5 @@ module FavouriteProjectsUserPatch
     end
   end
 end
+
+User.send(:include, FavouriteProjectsUserPatch)

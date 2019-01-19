@@ -1,63 +1,16 @@
 require 'redmine'
 
-# Including dispatcher.rb in case of Rails 2.x
-require 'dispatcher' unless Rails::VERSION::MAJOR >= 3
-
-if Rails::VERSION::MAJOR >= 3
-  RedmineApp::Application.config.after_initialize do
-    require_dependency 'application_helper'
-
-    unless Project.included_modules.include?(FavouriteProjectsProjectPatch)
-      Project.send(:include, FavouriteProjectsProjectPatch)
-    end
-
-    unless User.included_modules.include?(FavouriteProjectsUserPatch)
-      User.send(:include, FavouriteProjectsUserPatch)
-    end
-    
-    unless ApplicationHelper.included_modules.include?(FavouriteProjectsApplicationHelperPatch)
-      ApplicationHelper.send(:include, FavouriteProjectsApplicationHelperPatch)
-    end
-    
-    unless MyHelper.included_modules.include?(FavouriteProjectsMyHelperPatch)
-      MyHelper.send(:include, FavouriteProjectsMyHelperPatch)
-    end
-
-    unless Redmine::MenuManager::MenuHelper.included_modules.include?(FavouriteProjectsMenuPatch)
-      Redmine::MenuManager::MenuHelper.send(:include, FavouriteProjectsMenuPatch)
-    end
-  end
-else
-  Dispatcher.to_prepare :redmine_favourite_projects do
-    require_dependency 'application_helper'
-
-    unless Project.included_modules.include?(FavouriteProjectsProjectPatch)
-      Project.send(:include, FavouriteProjectsProjectPatch)
-    end
-
-    unless User.included_modules.include?(FavouriteProjectsUserPatch)
-      User.send(:include, FavouriteProjectsUserPatch)
-    end    
-
-    unless ApplicationHelper.included_modules.include?(FavouriteProjectsApplicationHelperPatch)
-      ApplicationHelper.send(:include, FavouriteProjectsApplicationHelperPatch)
-    end
-
-    unless MyHelper.included_modules.include?(FavouriteProjectsMyHelperPatch)
-      MyHelper.send(:include, FavouriteProjectsMyHelperPatch)
-    end
-
-    unless Redmine::MenuManager::MenuHelper.included_modules.include?(FavouriteProjectsMenuPatch)
-      Redmine::MenuManager::MenuHelper.send(:include, FavouriteProjectsMenuPatch)
-    end
-  end
-end
+require 'favourite_projects_application_helper_patch'
+require 'favourite_projects_menu_patch'
+require 'favourite_projects_my_helper_patch'
+require 'favourite_projects_project_patch'
+require 'favourite_projects_user_patch'
 
 Redmine::Plugin.register :redmine_favourite_projects do
   name 'Redmine Favourite Projects plugin'
   author 'Syntactic Vexation'
   description 'This is a plugin for Redmine to provide a list of favourite projects on My Page, Top Menu or Project Jumplist'
-  version '0.10'
+  version '1.0'
   url 'https://github.com/syntacticvexation/redmine_favourite_projects'
 
   

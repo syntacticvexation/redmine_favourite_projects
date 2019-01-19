@@ -1,4 +1,4 @@
-class CreateFavouriteProjects < ActiveRecord::Migration
+class CreateFavouriteProjects < ActiveRecord::Migration[4.2]
   def self.up
     create_table :favourite_projects do |t|
       t.column :user_id, :integer, :null => false
