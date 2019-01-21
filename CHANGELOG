@@ -1,3 +1,5 @@
+1.0
+    * Updated to support Redmine 4.0
 0.10
     * Removed chosen styled jumpbox in favour of Redmine > 3.4's own new Ajax jumpbox
 
