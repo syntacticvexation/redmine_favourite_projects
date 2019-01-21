@@ -5,7 +5,7 @@ class FavouriteProjectsController < ApplicationController
     @user = User.current
     @settings = @user.pref[:redmine_favourite_projects]
 
-    if @settings.nil? or not @settings.member? :user_overriden
+    if @settings.nil? or not @settings.include? :user_overriden
       @settings = Setting['plugin_redmine_favourite_projects']
     end
     

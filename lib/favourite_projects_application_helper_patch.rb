@@ -35,7 +35,7 @@ module FavouriteProjectsApplicationHelperPatch
   	# the administrator allows the user to override settings and the user has overriden them
   	if Setting.plugin_redmine_favourite_projects['allowUserOverride'] and not User.current.pref.nil? and 
   	  not User.current.pref[:redmine_favourite_projects].nil? and 
-  	  User.current.pref[:redmine_favourite_projects].member? :user_overriden
+  	  User.current.pref[:redmine_favourite_projects].include? :user_overriden
   		return User.current.pref[:redmine_favourite_projects]
   	end
 
