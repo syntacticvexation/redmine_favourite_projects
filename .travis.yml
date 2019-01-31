@@ -5,7 +5,7 @@ branches:
   only:
     - master
 env:
-  - REDMINE_VERSION=4.0.0 VERBOSE=yes
+  - REDMINE_VERSION=master VERBOSE=yes
 script:
   - export PLUGIN=redmine_favourite_projects
   - export WORKSPACE=$(pwd)/workspace
