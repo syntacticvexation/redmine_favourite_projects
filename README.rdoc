@@ -3,9 +3,10 @@
 This is a plugin for Redmine to provide a list of favourite projects on My Page, Top Menu or Project Jumplist
 
 Only Redmine 3.4.x and greater is now supported by this plugin.  
-
+* Redmine 4.0 is supported by the master branch and >= 1.0 releases.
+* Redmine 3.4 is supported by the "redmine3.4-compatible" branch.
 * For Redmine 2.1.x up to 3.3.x, use the legacy "redmine3.0-3.3-compatible" branch.
-* For Redmine 1.x/2.0 support, use the legacy "redmine1.x/2.0-compatible" branch.
+* For Redmine 1.x/2.0, use the legacy "redmine1.x/2.0-compatible" branch.
 
 == Installation
 
